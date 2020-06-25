@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Login from  "../auth/login";
+import React, { Component } from "react";
+import Login from "../auth/login";
 import loginImg from "../../../static/assets/image/auth/login.jpg";
 
 export default class Auth extends Component {
