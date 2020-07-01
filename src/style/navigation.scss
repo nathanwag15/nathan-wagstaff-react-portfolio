@@ -2,6 +2,9 @@
         display: flex;
         justify-content: space-between;
         padding: 30px;
+        position: fixed;
+        background-color: white;
+        width: 110vw;
 
         .left-side {
             display:flex;
