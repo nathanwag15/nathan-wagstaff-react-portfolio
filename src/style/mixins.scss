@@ -1,7 +1,7 @@
 @mixin base-btn {
     cursor: pointer;
     height: 42px;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 500;
     border: 1px solid transparent;
     transition: all 0.5s ease-in-out;
@@ -16,4 +16,31 @@
     &:hover {
         background-color: $dark-grey;
     }
+}
+
+@mixin input-element {
+    input {
+        font-family: "Titillium Web", sans-serif;
+        color: $brown;
+        padding: 5px 0px;
+        width: 100%;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid $orange;
+        background-color: transparent;
+        transition: 0.5s all ease-in-out;
+        font-size: 1.1em;
+        margin-bottom: 21px;
+        
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid $dark-orange
+        }
+    }
+}
+
+@mixin base-grid() {
+    display: grid;
+    grid-gap: 21px;
 }
