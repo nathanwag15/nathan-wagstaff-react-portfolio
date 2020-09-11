@@ -19,7 +19,8 @@ export default class PortfolioItem extends Component {
   }
 
   render() {
-    const { id, description, thumb_image_url, logo_url } = this.props.item;
+    console.log(this.props.item)
+    const { id, description, thumb_image_url, logo_url, url, name } = this.props.item;
     return (
       <div
         className="portfolio-item-wrapper"
@@ -36,11 +37,13 @@ export default class PortfolioItem extends Component {
         />
 
         <div className="img-text-wrapper">
+          <div className="title">{name}</div>
           <div className="logo-wrapper">
             <img src={logo_url} />
           </div>
 
           <div className="subtitle">{description}</div>
+          <a href={url}>Github</a>
         </div>
       </div>
     );

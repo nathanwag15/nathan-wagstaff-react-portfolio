@@ -5,6 +5,12 @@
   
     .portfolio-item-wrapper {
       position: relative;
+
+      .title{
+        color: $offwhite;
+        font-family: "Titillium Web", sans-serif;
+        font-size: 1.3em;
+      }
   
       .portfolio-img-background {
         background-size: cover;
@@ -30,10 +36,19 @@
           transition: 1s ease-in-out;
           color: transparent;
         }
+
+        a{
+          transition: 1s ease-in-out;
+          color: $offwhite;
+          text-decoration: none;
+          background-color: $orange;
+          margin: 5px;
+          padding: 13px;
+        }
       }
   
       .img-text-wrapper:hover .subtitle {
-        color: $yellow;
+        color: $offwhite;
         font-weight: 400;
         
       }
