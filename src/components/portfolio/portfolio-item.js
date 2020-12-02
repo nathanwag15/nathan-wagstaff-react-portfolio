@@ -43,7 +43,7 @@ export default class PortfolioItem extends Component {
           </div>
 
           <div className="subtitle">{description}</div>
-          <a href={url}>Github</a>
+          <a href={url} target="_blank">Github</a>
         </div>
       </div>
     );
