@@ -18,7 +18,21 @@ export default class PortfolioManager extends Component {
   }
 
   handleDeleteClick(portfolioItem) {
-    console.log('handleDeleteClick', portfolioItem)
+    axios
+      .delete(
+        `https://nathanwag.devcamp.space/portfolio/portfolio_items/${portfolioItem.id}`, 
+        { withCredentials: true }
+      ).then(response => {
+        this.setState({
+          portfolioItems: this.state.portfolioItems.filter(item => {
+            return item.id !== portfolioItem.id;
+          })
+        })
+
+        return response.data;
+      }).catch(error => {
+        console.log("handleDeleteClick error", error)
+      })
   }
 
   handleSuccessfulFormSubmission(portfolioItem) {
@@ -34,7 +48,7 @@ export default class PortfolioManager extends Component {
   getPortfolioItems() {
     axios
       .get(
-        "https://jordan.devcamp.space/portfolio/portfolio_items?order_by=created_at&direction=desc",
+        "https://nathanwag.devcamp.space/portfolio/portfolio_items?order_by=created_at&direction=desc",
         {
           withCredentials: true
         }
