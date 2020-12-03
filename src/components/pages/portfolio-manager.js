@@ -27,7 +27,7 @@ export default class PortfolioManager extends Component {
           portfolioItems: this.state.portfolioItems.filter(item => {
             return item.id !== portfolioItem.id;
           })
-        })
+        });
 
         return response.data;
       }).catch(error => {
